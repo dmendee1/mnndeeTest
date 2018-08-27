@@ -9,7 +9,7 @@ const WorkerSchema = new Schema({
 	department: {type: String, required: true},
 	username: {type: String, required: true},
 	password: {type: String, required: true},
-	insertDate: {type: Date, default: Date.now}
+	insertDate: {type: Date, default: dateformat(Date.now, "yyyy-mm-dd HH-MM-ss")}
 });
 
 module.exports = Worker = mongoose.model('workers', WorkerSchema);
